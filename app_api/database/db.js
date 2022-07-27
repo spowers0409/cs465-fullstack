@@ -71,7 +71,7 @@ process.on("SIGTERM", () => {
 connect();
 
 // Bring in mongoose schema
-require("./travlr");
+require("./models/travlr");
 
 // const mongoose = require("mongoose");
 // let dbURI = "mongodb://localhost/Loc8r";

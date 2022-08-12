@@ -3,7 +3,7 @@ const host = process.env.DB_HOST || "127.0.0.1";
 const dbURI = `mongodb://${host}/travlr`;
 const readLine = require("readline");
 
-// Avoid current server discovery and monitoring engine is depreciated
+// avoid current server discovery and monitoring engine is depreciated
 mongoose.set("useUnifiedTopology", true);
 
 const connect = () => {
@@ -46,21 +46,21 @@ const gracefulShutdown = (msg, callback) => {
   });
 };
 
-// For nodemon restarts
+// nodemon restarts
 process.once("SIGUSR2", () => {
   gracefulShutdown("nodemon restart", () => {
     process.kill(process.pid, "SIGUSR2");
   });
 });
 
-// For app termination
+// app termination
 process.on("SIGINT", () => {
   gracefulShutdown("app termination", () => {
     process.exit(0);
   });
 });
 
-// For Herokue app termination
+// Herokue app termination
 process.on("SIGTERM", () => {
   gracefulShutdown("Heroku app shutdown", () => {
     process.exit(0);
@@ -69,5 +69,6 @@ process.on("SIGTERM", () => {
 
 connect();
 
-// To bring in schema
+// bring in schema
 require("./models/travlr");
+require("./models/user");

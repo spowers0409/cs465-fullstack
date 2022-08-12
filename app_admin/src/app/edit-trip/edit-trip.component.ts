@@ -43,6 +43,7 @@ export class EditTripComponent implements OnInit {
       return;
     }
     console.log("EditTripComponent#onInit found tripCode " + tripCode);
+
     // initialize form
     this.editForm = this.formBuilder.group({
       _id: [],
@@ -60,13 +61,13 @@ export class EditTripComponent implements OnInit {
         tripCode +
         "')"
     );
-
     this.tripService.getTrip(tripCode).then((data) => {
       console.log(data);
       // Don't use editForm.setValue() as it will throw console error
       this.editForm.patchValue(data[0]);
     });
   }
+
   onSubmit() {
     this.submitted = true;
     if (this.editForm.valid) {
@@ -75,9 +76,5 @@ export class EditTripComponent implements OnInit {
         this.router.navigate([""]);
       });
     }
-  }
-  // get the form short name to access the form fields
-  get f() {
-    return this.editForm.controls;
   }
 }

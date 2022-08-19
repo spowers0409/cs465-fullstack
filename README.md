@@ -1,5 +1,11 @@
 <h1>CS-465 Full Stack Development With MEAN</h1>
 <p>The intention of this project was to take a static HTML webpage, and convert it to a full stack page with a backend SPA page to allow an administrator to login and make changes to the user viewing page.</p>
+
+<p float= "left">
+<img src="https://user-images.githubusercontent.com/85845285/185636788-311ae918-1d37-4bd4-b8d2-7982b6256f05.png" width=300>
+<img src="https://user-images.githubusercontent.com/85845285/185634858-709de38d-a5c8-41b5-aa69-c348691de4f2.png" width=200>
+<img src="https://user-images.githubusercontent.com/85845285/185636174-aed90634-1dbd-4337-8444-de834a487b1f.png" width=200>
+</p>
 <hr>
 <br>
 <br>
